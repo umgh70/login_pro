@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="http://localhost:3000/css/dashboardStyle.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://localhost:3000/css/usersstyle.css">
+</head>
+<body>
+    <h1><%= contact.name %></h1>
+    <form action="/dashboard/<%= contact.id %>?method=put" method="post" class="form-container">
+        <input type="text" placeholder="fname" name="name" value="<%= contact.name %>">
+        <input type="text" placeholder="lname" name="phoneNo" value="<%= contact.phoneNo%>">
+        <input type="text" placeholder="email" name="address" value="<%= contact.address %>">
+        <input type="text" placeholder="status" name="status" value="<%= contact.status %>">
+        <input type="submit" value="update" class="button accept-button">
+    </form>
+</body>
+</html>
